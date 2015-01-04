@@ -65,8 +65,11 @@ class GamesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_game
       @game = Game.find(params[:id])
-      @comments = @game.comments.all
-      @comment = @game.comments.build
+      @_method = params[:_method]
+      if @_method != 'patch'
+        @comments = @game.comments.all
+        @comment = @game.comments.build
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
