@@ -14,10 +14,10 @@
   <tbody>
     <% @games.each do |game| %>
       <tr>
-        <td><%= game.name %></td>
+        <td nowrap bgcolor="#d8d8d8" align=center><%= game.name %></td>
         <td><%= game.description %></td>
         <td><%= image_tag(game.picture_url, :width => 80) if game.picture.present? %></td>
-        <td><%= game.mark %></td>
+        <td align=center><%= game.mark %></td>
         <td><%= link_to 'Plus de détails', game %></td>
         <td><%= link_to 'Editer', edit_game_path(game) %></td>
         <td><%= link_to 'Supprimer', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
