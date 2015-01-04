@@ -1,0 +1,32 @@
+Insatallation du serveur VideoGames (RubyOnRails)
+
+Réalisé par Antoine PUISSANT
+Dernier update le 04/01/2015
+
+Pour installer le serveur, il vous faudra au préalable :
+     Ruby
+     Rails
+     Sqlite3
+     Git
+
+Dans un premier temps, créez un dossier et positionnez vous dedans :
+     mkdir Server_RoR
+     cd Server_RoR
+
+Clonez le projet dans ce dossier :
+       git clone https://github.com/BlackyFox/RoR_PUISSANT.git
+
+Placer vous dans le dossier de l'application :
+       cd RoR_PUISSANT
+
+Faites un bundle :
+       bundle install
+Si des erreurs ont lieu, suivez les messages d'erreurs et installez les paquets ou gem manquants.
+
+Migrez la base de donnée :
+       bin/rake db:migrate
+
+Une fois toutes ces étapes faites sans erreurs, lancer le serveur :
+    rails server
+
+Le serveur est accessible sur votre adresse locale (127.0.0.1:3000 ou localhost:3000). Vous pouvez aussi y accéder en utilisant votre adresse IP locale sur d'autres machine (par example : 192.168.1.2:3000).
