@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root :to => redirect('/games')
 
   get 'pages/info'
-  get 'pages/contact'
+  get 'autres/contact'
 
   resources :comments
 

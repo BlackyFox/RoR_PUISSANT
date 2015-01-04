@@ -25,6 +25,7 @@
 	  <ul class="nav navbar-nav">
             <li class="<%= 'active' if params[:controller] == 'games'=%>"><a href="/games">Les jeux</a></li>
 	    <li class="<%= 'active' if params[:controller] == 'pages'=%>"><a href="/pages/info">Informations</a></li>
+	    <li class="<%= 'active' if params[:controller] == 'autres'=%>"><a href="/autres/contact">Contact</a></li>
 	  </ul>
 	  <p class="navbar-text pull-right">
 	    <% if user_signed_in? %>
