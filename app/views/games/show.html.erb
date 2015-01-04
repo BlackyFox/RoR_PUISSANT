@@ -1,15 +1,20 @@
 <p>
-  <strong>Name:</strong>
+  <strong>Titre : </strong>
   <%= @game.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Note : </strong>
+  <%= @game.mark %>
+</p>
+
+<p>
+  <strong>Description : </strong>
   <%= @game.description %>
 </p>
 
 <p>
-  <strong>Picture:</strong>
+  <strong>Image : </strong>
   <%= image_tag(@game.picture_url, :width => 600) if @game.picture.present? %>
   <h3>Comments</h3>
   <% @comments.each do |comment| %>
@@ -21,11 +26,6 @@
   </div>
   <% end %>
   <%= render 'comments/form' %>
-</p>
-
-<p>
-  <strong>Mark:</strong>
-  <%= @game.mark %>
 </p>
 
 <%= link_to 'Edit', edit_game_path(@game) %> |
