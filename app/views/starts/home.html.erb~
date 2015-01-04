@@ -1,0 +1,2 @@
+<h1>Bienvenu</h1>
+<p>Bienvenu à toi <%= current_user.email %> !</br>Tu peux aller voir la liste des jeux et en ajouter dès maintenant en cliquant dans l'onglet <strong>Les jeux</strong></p>

@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-  root :to => redirect('/games')
+  root :to => redirect('/starts/home')
 
   get 'pages/info'
   get 'autres/contact'
+  get 'starts/home'
 
   resources :comments
 
